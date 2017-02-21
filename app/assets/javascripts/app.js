@@ -13,7 +13,7 @@ angular.module('rengaApp', ['ui.router'])
       templateUrl: '/rengas.html',
       controller: 'RengaCtrl'
     });
-    // $urlRouterProvider.otherwise('home');
+    $urlRouterProvider.otherwise('home');
   }
 ])
 .factory('rengas', function(){
