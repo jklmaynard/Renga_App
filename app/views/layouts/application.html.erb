@@ -6,29 +6,9 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
   <body ng-app="rengaApp">
-    <ui-view></ui-view>
-  </body>
-  <script type="text/ng-template" id="/home.html">
-    <div ng-repeat="renga in rengas" class="container">
-      <a href="#!/rengas/{{$index}}"><h3>{{renga.title}}</h3></a>
-      <div ng-repeat="stanza in renga.stanzas" class="">
-        {{stanza.line_one}}<br>
-        {{stanza.line_two}}<br>
-        {{stanza.line_three}}
-      </div>
-    </div>
-  </script>
-  <script type="text/ng-template" id="/rengas.html">
     <div class="container">
-      <h3>{{renga.title}}</h3>
-      <div ng-repeat="stanza in renga.stanzas" class="">
-        {{stanza.line_one}}<br>
-        {{stanza.line_two}}<br>
-        {{stanza.line_three}}
-      </div>
+      <ui-view></ui-view>
     </div>
-  </script>
-
+  </body>
 </html>

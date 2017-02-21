@@ -1,0 +1,8 @@
+<div ng-repeat="renga in rengas" class="">
+  <a href="#!/rengas/{{$index}}"><h3>{{renga.title}}</h3></a>
+  <div ng-repeat="stanza in renga.stanzas" class="">
+    {{stanza.line_one}}<br>
+    {{stanza.line_two}}<br>
+    {{stanza.line_three}}
+  </div>
+</div>

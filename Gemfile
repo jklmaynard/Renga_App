@@ -18,6 +18,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'angular-rails-templates', '~> 1.0.2'
+gem 'angular_rails_csrf'
+gem 'responders', '~>2.3.0'
+gem 'devise', '~> 4.2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
