@@ -1,0 +1,2 @@
+class Stanza < ApplicationRecord
+end

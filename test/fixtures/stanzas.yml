@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ordinal: 1
+  line_one: MyString
+  line_two: MyString
+  line_three: MyString
+
+two:
+  ordinal: 1
+  line_one: MyString
+  line_two: MyString
+  line_three: MyString
