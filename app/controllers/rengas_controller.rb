@@ -14,8 +14,8 @@ class RengasController < ApplicationController
 
   def like
     renga = Renga.find(params[:id])
-
     renga.increment!(:likes)
+    
     repond_with renga
   end
 
