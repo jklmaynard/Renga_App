@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222001833) do
+ActiveRecord::Schema.define(version: 20170222185438) do
 
   create_table "rengas", force: :cascade do |t|
     t.string   "title"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170222001833) do
     t.boolean  "is_daisan",  default: false
     t.boolean  "is_ageku",   default: false
     t.integer  "likes",      default: 0
+    t.integer  "renga_id"
   end
 
 end
