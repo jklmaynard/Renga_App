@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221235926) do
+ActiveRecord::Schema.define(version: 20170222000401) do
 
   create_table "rengas", force: :cascade do |t|
     t.string   "title"
@@ -23,8 +23,12 @@ ActiveRecord::Schema.define(version: 20170221235926) do
     t.string   "line_one"
     t.string   "line_two"
     t.string   "line_three"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "is_hokku",   default: false
+    t.boolean  "is_waki",    default: false
+    t.boolean  "is_daisan",  default: false
+    t.boolean  "is_ageku",   default: false
   end
 
 end
