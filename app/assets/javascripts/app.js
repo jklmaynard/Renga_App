@@ -6,7 +6,12 @@ angular.module('rengaApp', ['ui.router', 'templates'])
     $stateProvider.state('home', {
       url: '/home',
       templateUrl: 'home/_home.html',
-      controller: 'MainCtrl'
+      controller: 'MainCtrl',
+      resolve: {
+        rengaPromise: ['rengas', function(rengas) {
+          return rengas.getAll();
+        }]
+      }
     });
     $stateProvider.state('rengas', {
       url: '/rengas/{id}',
