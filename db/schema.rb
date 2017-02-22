@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170222000401) do
+ActiveRecord::Schema.define(version: 20170222001833) do
 
   create_table "rengas", force: :cascade do |t|
     t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "likes",      default: 0
   end
 
   create_table "stanzas", force: :cascade do |t|
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170222000401) do
     t.boolean  "is_waki",    default: false
     t.boolean  "is_daisan",  default: false
     t.boolean  "is_ageku",   default: false
+    t.integer  "likes",      default: 0
   end
 
 end

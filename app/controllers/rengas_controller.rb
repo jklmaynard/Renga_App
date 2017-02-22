@@ -1,0 +1,2 @@
+class RengasController < ApplicationController
+end

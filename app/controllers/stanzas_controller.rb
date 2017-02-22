@@ -1,0 +1,2 @@
+class StanzasController < ApplicationController
+end
