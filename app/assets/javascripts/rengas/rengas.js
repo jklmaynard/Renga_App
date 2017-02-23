@@ -7,15 +7,18 @@ angular.module('rengaApp')
     });
   };
   obj.get = function(id) {
-    return $http.get('/rengas/' + id + '.json').then(function(res){
+    return $http.get('/rengas/' + id + '.json').then(function(res) {
       return res.data;
     })
   };
   obj.create = function(renga) {
-    return $http.post('/rengas.json', renga).then(function(res){
+    return $http.post('/rengas.json', renga).then(function(res) {
       obj.rengas.push(res.data);
       $state.go('rengas', {id: res.data.id});
     });
   };
+  obj.addStanza = function(id, stanza) {
+    return $http.post('/rengas/' + id + '/stanzas.json', stanza);
+  }
 return obj;
 }]);
