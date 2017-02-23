@@ -18,6 +18,11 @@ angular.module('rengaApp', ['ui.router', 'templates'])
       templateUrl: 'rengas/_rengas.html',
       controller: 'RengaCtrl'
     });
+    $stateProvider.state('new_renga', {
+      url: '/new-poem',
+      templateUrl: 'static/_new-renga.html',
+      controller: 'MainCtrl'
+    });
     $urlRouterProvider.otherwise('home');
   }
 ]);
