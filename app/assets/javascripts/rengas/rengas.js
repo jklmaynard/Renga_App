@@ -6,5 +6,10 @@ angular.module('rengaApp')
       angular.copy(data.data, obj.rengas);
     });
   };
+  obj.create = function(renga) {
+    return $http.post('/rengas.json', renga).then(function(data){
+      obj.rengas.push(data.data)
+    });
+  };
 return obj;
 }]);

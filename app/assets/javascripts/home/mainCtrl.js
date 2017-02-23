@@ -3,4 +3,10 @@ angular.module('rengaApp').controller('MainCtrl', [
   'rengas',
   function($scope, rengas) {
     $scope.rengas = rengas.rengas;
+    $scope.addRenga = function() {
+      rengas.create({
+        title: $scope.title,
+        likes: 0
+      });
+    };
 }]);
