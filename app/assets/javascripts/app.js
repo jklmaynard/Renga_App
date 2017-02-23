@@ -16,7 +16,12 @@ angular.module('rengaApp', ['ui.router', 'templates'])
     $stateProvider.state('rengas', {
       url: '/rengas/{id}',
       templateUrl: 'rengas/_rengas.html',
-      controller: 'RengaCtrl'
+      controller: 'RengaCtrl',
+      resolve: {
+        renga: ['$stateParams', 'rengas', function($stateParams, rengas) {
+          return rengas.get($stateParams.id);
+        }]
+      }
     });
     $stateProvider.state('new_renga', {
       url: '/new-poem',
